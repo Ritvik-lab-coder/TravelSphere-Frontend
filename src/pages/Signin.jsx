@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { signupUserEndpoint } from '../API/APIRoutes.js';
+import { host, signupUserEndpoint } from '../API/APIRoutes.js';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '/assets/logo.png';
 
 const Signin = () => {
     const handleSignup = () => {
-        window.open('http://localhost:5000/auth/google', '_self');
+        window.open(`${host}/auth/google`, '_self');
     };
 
     const [userData, setUserData] = useState({

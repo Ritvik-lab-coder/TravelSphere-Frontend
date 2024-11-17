@@ -12,7 +12,7 @@ function getCookie(name) {
 
 const Login = () => {
     const handleLogin = () => {
-        window.open('http://localhost:5000/auth/google', '_self');
+        window.open(`${host}/auth/google`, '_self');
         const userCookie = getCookie('user');
         if (userCookie) {
             localStorage.setItem('user', userCookie);
